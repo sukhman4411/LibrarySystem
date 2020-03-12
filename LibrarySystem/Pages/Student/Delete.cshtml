@@ -1,0 +1,58 @@
+﻿@page
+@model LibrarySystem.Pages.Student.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.FatherName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.FatherName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Mobile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Mobile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Author)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Author.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Book)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Student.Book.ID)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Student.ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
